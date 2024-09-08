@@ -11,8 +11,8 @@ import { baseUrl } from "./sitemap";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Next.js Portfolio Starter",
-    template: "%s | Next.js Portfolio Starter",
+    default: "Carlijn van de Weijer Portfolio",
+    template: "%s | Carlijn van de Weijer Portfolio",
   },
   description: "This is my portfolio.",
   openGraph: {
@@ -47,7 +47,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        "text-black bg-white dark:text-white dark:bg-black",
+        "text-black bg-white",
         GeistSans.variable,
         GeistMono.variable
       )}
