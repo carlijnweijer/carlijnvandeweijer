@@ -26,7 +26,7 @@ const HoverTooltip = ({ children }) => {
 
   return (
     <div
-      className="relative inline-block cursor-pointer"
+      className="relative inline-block cursor-help"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
