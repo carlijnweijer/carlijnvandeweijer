@@ -2,6 +2,7 @@ import { BlogPosts } from "app/components/posts";
 import Education from "./components/education";
 import { education, experience } from "./resume";
 import Experience from "./components/experience";
+import HoverTooltip from "./components/tooltip";
 
 export default function Page() {
   return (
@@ -52,7 +53,7 @@ export default function Page() {
         <h2 className="mb-4 text-4xl font-semibold tracking-tighter border-b-3 pb-4 border-black">
           work experience
         </h2>
-        <p className="mb-4">
+        <div className="mb-4">
           {experience.map((item, i) => (
             <Experience
               key={i}
@@ -62,7 +63,7 @@ export default function Page() {
               description={item.description}
             />
           ))}
-        </p>
+        </div>
         {/* <div className="my-8">
           <BlogPosts />
         </div> */}

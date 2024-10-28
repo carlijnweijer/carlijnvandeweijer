@@ -1,5 +1,6 @@
 import React from "react";
 import { education } from "app/resume";
+import HoverTooltip from "./tooltip";
 
 type Props = {
   date: string;

@@ -1,4 +1,5 @@
 import React from "react";
+import HoverTooltip from "./tooltip";
 
 type Props = {
   title: string;
@@ -16,7 +17,9 @@ const Experience = ({ title, company, date, description }: Props) => {
       </div>
       <div>
         <h3>{title}</h3>
-        <p className="text-sm text-zinc-400">{description}</p>
+        <HoverTooltip>
+          <p className="text-sm text-zinc-400">{description}</p>
+        </HoverTooltip>
       </div>
     </article>
   );
