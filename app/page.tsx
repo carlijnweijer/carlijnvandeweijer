@@ -61,6 +61,7 @@ export default function Page() {
               company={item.company}
               date={item.date}
               description={item.description}
+              tooltiptext={item.tooltiptext}
             />
           ))}
         </div>

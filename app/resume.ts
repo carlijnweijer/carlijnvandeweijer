@@ -5,6 +5,7 @@ type Experience = {
   description: string;
   skills?: string;
   link?: string;
+  tooltiptext: string;
 };
 
 const experience: Experience[] = [
@@ -17,6 +18,7 @@ Customized web components to meet clients’ specific needs, with a focus on res
 Collaborated with clients to translate business requirements into functional and visually appealing interfaces, managing projects independently and ensuring timely delivery.`,
     skills: `React, Bootstrap, Vue, Client Communication, Planning, Accessibility Standards, Testing`,
     link: "/",
+    tooltiptext: "View projects",
   },
   {
     title: "Sales Development Representative",
@@ -26,8 +28,10 @@ Collaborated with clients to translate business requirements into functional and
 Worked with mid-market and SMB clients, focusing on outbound strategies and market research to identify key talent acquisition needs.
 Leveraged advanced communication and planning skills to engage and retain high-value clients, enhancing LinkedIn’s presence in the Benelux market.`,
     skills: `Stakeholder Management, Client Communication, Project Planning, Sales Methodology, Market Research`,
+    tooltiptext: "View projects",
   },
   {
+    tooltiptext: "View projects",
     title: "Frontend Developer",
     company: "Elements Interactive",
     date: "Oct 2021 - Sept 2023",
@@ -43,6 +47,7 @@ Integrated accessibility features, such as screen reader support, and trained te
     skills: `React, Bootstrap, Vue, Client Communication, Planning, Accessibility Standards, Testing`,
   },
   {
+    tooltiptext: "View projects",
     title: "Frontend Developer",
     company: "Ontwerpwerk",
     date: "Mar 2021 - Oct 2021",

@@ -3,7 +3,7 @@
 import { useSpring, motion } from "framer-motion";
 import React, { useState } from "react";
 
-const HoverTooltip = ({ children }) => {
+const HoverTooltip = ({ children, tooltiptext }) => {
   const [visible, setVisible] = useState(false);
 
   const mouseX = useSpring(0, { stiffness: 300, damping: 20 });
@@ -44,7 +44,7 @@ const HoverTooltip = ({ children }) => {
             zIndex: 1000,
           }}
         >
-          click to read see my projects...
+          {tooltiptext}
         </motion.div>
       )}
     </div>
