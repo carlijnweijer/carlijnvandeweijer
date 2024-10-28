@@ -12,8 +12,8 @@ const Education = ({ date, school, degree }: Props) => {
     <article className="mb-8">
       <div>
         <h3 className="text-xs text-zinc-400">{date}</h3>
-        <p className="text-md font-semibold">{school}</p>
-        <p className="text-xs text-zinc-400">{degree}</p>
+        <p className="text-md font-semibold">{degree}</p>
+        <p className="text-xs text-zinc-400">{school}</p>
       </div>
     </article>
   );

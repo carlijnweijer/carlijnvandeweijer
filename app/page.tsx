@@ -11,13 +11,16 @@ export default function Page() {
           <h2 className="mb-4 text-4xl font-semibold tracking-tighter border-b-3 pb-4 border-black">
             about me
           </h2>
-          <div className="mb-4 text-zinc-400">
+          <div className="mb-4 text-zinc-400 text-sm">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-              vero tenetur minima distinctio doloribus enim cumque a, itaque
-              consequatur aliquid nesciunt tempore ut aliquam voluptatibus sequi
-              corrupti! Dolores atque rerum explicabo a! Corporis illo
-              consequuntur corrupti quam at in velit?
+              Experienced frontend engineer with a strong foundation in modern
+              JavaScript frameworks (React, Vue) and a commitment to accessible,
+              user-centric design. Known for my versatility and adaptability, I
+              bring expertise in client communication, stakeholder management,
+              and project execution honed through both technical and
+              business-focused roles. Adept at bridging the gap between
+              technical teams and business needs, I thrive in collaborative
+              environments focused on creating high-impact solutions.
             </p>
           </div>
         </section>
@@ -40,7 +43,7 @@ export default function Page() {
           <h2 className="mb-4 text-4xl font-semibold tracking-tighter border-b-3 pb-4 border-black">
             skills
           </h2>
-          <p className="mb-4">
+          <p className="mb-4 text-sm">
             Grid based web design, Vim, TypeScript, Dark mode, Tabs over spaces
           </p>
         </section>
