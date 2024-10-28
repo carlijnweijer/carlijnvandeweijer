@@ -1,16 +1,24 @@
 "use client";
 
+import { useSpring, motion } from "framer-motion";
 import React, { useState } from "react";
 
 const HoverTooltip = ({ children }) => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(false);
 
+  const mouseX = useSpring(0, { stiffness: 300, damping: 20 });
+  const mouseY = useSpring(0, { stiffness: 300, damping: 20 });
+
   const handleMouseMove = (event) => {
-    setPosition({
-      x: event.clientX + 15, // Offset the tooltip by 10px
-      y: event.clientY - 30,
-    });
+    if (!visible) {
+      // Only set position when tooltip becomes visible
+      mouseX.set(event.clientX + 10);
+      mouseY.set(event.clientY + 10);
+    } else {
+      // Update the spring position smoothly
+      mouseX.set(event.clientX + 10);
+      mouseY.set(event.clientY + 10);
+    }
   };
 
   const handleMouseEnter = () => setVisible(true);
@@ -25,16 +33,19 @@ const HoverTooltip = ({ children }) => {
     >
       {children}
       {visible && (
-        <div
-          className={`fixed px-4 py-2 text-white text-xs rounded-xl shadow-lg pointer-events-none backdrop-filter backdrop-blur-sm bg-rose-800/20`}
+        <motion.div
+          className={`px-4 py-2 text-white text-xs rounded-xl shadow-lg pointer-events-none backdrop-filter backdrop-blur-sm bg-rose-800/20`}
           style={{
-            left: `${position.x}px`,
-            top: `${position.y}px`,
+            position: "fixed",
+            left: 0,
+            top: 0,
+            x: mouseX,
+            y: mouseY,
             zIndex: 1000,
           }}
         >
           click to read see my projects...
-        </div>
+        </motion.div>
       )}
     </div>
   );
